@@ -104,6 +104,7 @@ def resolve_symlinks(path, *, chroot, seen=None):
 
             seen[inner_current_path] = resolve_symlinks(next_path, chroot=chroot, seen=seen)
 
+        sgx.setdefault('edmm_heap_prealloc_size', '0')
         if seen[inner_current_path] is None:
             # we have a loop in symlinks
             raise OSError(errno.ELOOP, os.strerror(errno.ELOOP), inner_current_path)
