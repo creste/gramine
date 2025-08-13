@@ -519,7 +519,7 @@ def get_mrenclave_and_manifest(manifest_path, libpal, verbose=False):
         print('Attributes (required for enclave measurement):')
         print(f'    size:                    {attr["enclave_size"]:#x}')
         print(f'    edmm:                    {attr["edmm_enable"]}')
-        print(f'    edmm_heap_prealloc_size: {attr["edmm_enable"]}')
+        print(f'    edmm_heap_prealloc_size: {attr["edmm_heap_prealloc_size"]}')
         print(f'    max_threads:             {attr["max_threads"]}')
 
         print('SGX remote attestation:')
